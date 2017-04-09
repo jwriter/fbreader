@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FB2Library</name>
+    </assembly>
+    <members>
+        <member name="T:FB2Library.Elements.BodyItem">
+            <summary>
+            Main content of the book, multiple bodies are used for additional information, like footnotes, that do not appear in the main book flow. 
+            The first body is presented to the reader by default, and content in the other bodies should be accessible by hyperlinks. 
+            Name attribute should describe the meaning of this body, this is optional for the main body.
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.CustomTextFieldType.InfoType">
+            <summary>
+            Get/Set info-type attribute
+            </summary>
+        </member>
+        <member name="T:FB2Library.Elements.DateItem">
+            <summary>
+            A human readable date, maybe not exact, with an optional computer readable variant
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.DateItem.Text">
+            <summary>
+            Get/Set Date as Text
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.DateItem.DateValue">
+            <summary>
+            Get/Set Date in computer readable form
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.DateItem.Language">
+            <summary>
+            Get/Set language
+            </summary>
+        </member>
+        <member name="T:FB2Library.Elements.GenreType">
+            <summary>
+            Holds genre element
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.GenreType.Genre">
+            <summary>
+            Get/Set genre
+            </summary>
+        </member>
+        <member name="T:FB2Library.Elements.TitleGenreType">
+            <summary>
+            Extends  GenreType class to support match 
+            match from 1 to 100%
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.TitleGenreType.Match">
+            <summary>
+            Get/Set matching value , can be from 1 to 100%
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.OutPutDocumentType.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.OutPutDocumentType.Parts">
+            <summary>
+            Get list of the instruction parts
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.OutPutDocumentType.Name">
+            <summary>
+            Get/Set Name attribute
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.OutPutDocumentType.Create">
+            <summary>
+            Get/Set document part creation type
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.OutPutDocumentType.Price">
+            <summary>
+            Get/Set price
+            </summary>
+        </member>
+        <member name="T:FB2Library.Elements.PartShareInstructionType">
+            <summary>
+            Pointer to cpecific document section, explaining how to deal with it
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.PartShareInstructionType.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.SequenceType.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.SequenceType.Name">
+            <summary>
+            Get/Set name of the sequence
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.SequenceType.Number">
+            <summary>
+            Get/Set sequence number
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.SequenceType.Language">
+            <summary>
+            Get/Set language
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.SequenceType.SubSections">
+            <summary>
+            Get subsection list
+            </summary>
+        </member>
+        <member name="T:FB2Library.Elements.ShareInstructionType">
+            <summary>
+            In-document instruction for generating output free and payed documents
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.ShareInstructionType.SharedMode">
+            <summary>
+            Get/Set Modes for document sharing
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.ShareInstructionType.Instruction">
+            <summary>
+            Get/Set instructions to process sections
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.ShareInstructionType.Price">
+            <summary>
+            Get/Set price
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.ShareInstructionType.Currency">
+            <summary>
+            Get/Set currency
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.ShareInstructionType.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.ShareInstructionType.Content">
+            <summary>
+            Get list of content elements
+            </summary>
+        </member>
+        <member name="T:FB2Library.Elements.StyleElement">
+            <summary>
+            Represents FB2 stylesheet element
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.StyleElement.Value">
+            <summary>
+            Get/Set Style Value
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.StyleElement.Type">
+            <summary>
+            Get/Set type attribute
+            </summary>
+        </member>
+        <member name="M:FB2Library.Elements.StyleElement.Load(System.Xml.Linq.XElement)">
+            <summary>
+            Load element data from the node
+            </summary>
+            <param name="xElement"></param>
+        </member>
+        <member name="P:FB2Library.Elements.TextFieldType.Text">
+            <summary>
+            Get/Set text value
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.TextFieldType.Language">
+            <summary>
+            Get/Set language
+            </summary>
+        </member>
+        <member name="P:FB2Library.Elements.TitleItem.LangAttribute">
+            <summary>
+            Language attribute
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.FirstName">
+            <summary>
+            Author's first name
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.MiddleName">
+            <summary>
+            Author's middle name
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.LastName">
+            <summary>
+            Author's Last name
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.UID">
+            <summary>
+            Author's UID
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.NickName">
+            <summary>
+            Author's nickname
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.HomePage">
+            <summary>
+            Authors home page
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.AuthorType.EMail">
+            <summary>
+            Author's e-mail address
+            </summary>
+        </member>
+        <member name="M:FB2Library.HeaderItems.AuthorType.Load(System.Xml.Linq.XElement)">
+            <summary>
+            Loads Author's data from XML "author" node
+            </summary>
+            <param name="xElement">"author" XML node</param>
+            <returns>true if succeeded, false if failed</returns>
+        </member>
+        <member name="P:FB2Library.HeaderItems.CoverPage.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemCustomInfo.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="T:FB2Library.HeaderItems.ItemDocumentInfo">
+            <summary>
+            Information about this particular (xml) document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.SourceOCR">
+            <summary>
+            Author of the original (online) document, if this is a conversion
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.SourceURLs">
+            <summary>
+            Source URL if this document is a conversion of some other (online) document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.DocumentAuthors">
+            <summary>
+             List of document authors,  
+            note this is NOT book authors but document creators 
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.DocumentPublishers">
+            <summary>
+            Owners of the fb2 document copyrights
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.ProgramUsed2Create">
+            <summary>
+            Text specifiying program used to create the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.DocumentDate">
+            <summary>
+            Date of the document creation
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.ID">
+            <summary>
+            Document's UID
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.DocumentVersion">
+            <summary>
+            Document's version
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemDocumentInfo.History">
+            <summary>
+            Document changes history
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemInfoBase.Sequences">
+            <summary>
+            Get list of sequences
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemInfoBase.Namespace">
+            <summary>
+            XML namespace used to read the document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemInfoBase.BookTitle">
+            <summary>
+            Book Title
+            </summary>
+        </member>
+        <member name="T:FB2Library.HeaderItems.ItemPublishInfo">
+            <summary>
+            Information about some paper/outher published document, that was used as a source of this xml document
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemPublishInfo.ISBN">
+            <summary>
+            ISBN of original book
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemPublishInfo.Year">
+            <summary>
+            Year of the original (paper) publication
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemPublishInfo.City">
+            <summary>
+            City where the original (paper) book was published
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemPublishInfo.Publisher">
+            <summary>
+            Original (paper) book publisher
+            </summary>
+        </member>
+        <member name="T:FB2Library.HeaderItems.ItemTitleInfo">
+            <summary>
+            Book (as a book opposite a document) description
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.Translators">
+            <summary>
+            Translators if this is a translation
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.SrcLanguage">
+            <summary>
+            Book's source language if this is a translation
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.Keywords">
+            <summary>
+            Keywords used by search engine
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.Genres">
+            <summary>
+            Genres of the item
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.BookAuthors">
+            <summary>
+            Authors of this book
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.Annotation">
+            <summary>
+            Book's annotation
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.BookDate">
+            <summary>
+            Book date , can be a range like 1990-1991
+            </summary>
+        </member>
+        <member name="P:FB2Library.HeaderItems.ItemTitleInfo.Language">
+            <summary>
+            Book's language
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.Images">
+            <summary>
+            Get list of images (the image data itself) stored as binary objects
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.Bodies">
+            <summary>
+            Get list of bodies in document (including main)
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.TitleInfo">
+            <summary>
+            Get Document TitleInfo structure
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.DocumentInfo">
+            <summary>
+            Get Document DocumentInfo structure
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.SourceTitleInfo">
+            <summary>
+            Get Document SourceTitleInfo structure
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.CustomInfo">
+            <summary>
+            Get custom added information (if available)
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.PublishInfo">
+            <summary>
+            Get Document PublishInfo structure
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.MainBody">
+            <summary>
+            Get main body structure (book itself)
+            </summary>
+        </member>
+        <member name="P:FB2Library.FB2File.StyleSheets">
+            <summary>
+            Get styles applied to the book 
+            </summary>
+        </member>
+        <member name="M:FB2Library.FB2File.Load(System.Xml.Linq.XDocument,System.Boolean)">
+            <summary>
+            Loads the file as data from XML data
+            </summary>
+            <param name="fileDocument">XML document containing the file</param>
+            <param name="loadHeaderOnly">if true loads only header information</param>
+        </member>
+        <member name="T:FB2Library.FB2Reader">
+            <summary>
+            Simple class for reading Fb2 file.
+            </summary>
+        </member>
+        <member name="M:FB2Library.FB2Reader.ReadAsync(System.IO.Stream,FB2Library.XmlLoadSettings)">
+            <summary>
+            Read Fb2 file from Stream.
+            </summary>
+            <param name="stream">Fb2 file as a stream.</param>
+            <param name="settings">Settings for reading fb2 file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FB2Library.FB2Reader.ReadAsync(System.String)">
+            <summary>
+            Read Fb2 file from string.
+            </summary>
+            <param name="xml">Fb2 file content as a string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FB2Library.IFB2Reader.ReadAsync(System.IO.Stream,FB2Library.XmlLoadSettings)">
+            <summary>
+            Read Fb2 file from Stream.
+            </summary>
+            <param name="stream">Fb2 file as a stream.</param>
+            <param name="settings">Settings for reading fb2 file.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FB2Library.IFB2Reader.ReadAsync(System.String)">
+            <summary>
+            Read Fb2 file from string.
+            </summary>
+            <param name="xml">Fb2 file content as a string.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
