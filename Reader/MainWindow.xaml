@@ -1,0 +1,46 @@
+﻿<Window x:Class="Reader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Reader"
+        xmlns:converters="clr-namespace:Reader.Convertors"
+        Title="MainWindow" Height="350" Width="525"
+        Name="Papa">
+   <Window.DataContext>
+       <local:ReaderViewModel/>
+   </Window.DataContext>
+    <Window.Resources>
+        <converters:ArticleToString x:Key="ArticleToString"/>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.Column="0" MinWidth="0">
+            <TabItem Header="Содержание">
+                <ListView ItemsSource="{Binding NamesArticles}" SelectedItem="{Binding SelectedArticle}">
+                </ListView>
+            </TabItem>
+            <TabItem Header="Прошлые книги"></TabItem>
+        </TabControl>
+        <GridSplitter Grid.Column="1" Background="AntiqueWhite" HorizontalAlignment="Stretch"/>
+        <TextBox 
+            Grid.Column="2"
+            Background="Transparent" 
+            IsReadOnly="True" 
+            BorderThickness="0"
+            Margin="10"
+            TextWrapping="Wrap" 
+            MouseMove="MouseMove"
+            VerticalScrollBarVisibility="Visible"
+            HorizontalAlignment="Stretch"
+            Text ="{Binding SelectedArticle, Converter={StaticResource ArticleToString}}"
+            >
+            <TextBox.SelectionBrush>Brown</TextBox.SelectionBrush>
+        </TextBox>
+    </Grid>
+
+
+</Window>
